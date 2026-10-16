@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="password-card">
+
+            <h1>Password Generator</h1>
+
+            <p class="description">
+                Generate a strong and random password.
+            </p>
+
+            <div class="password-display">
+
+                <input type="text" id="password" placeholder="Your password will appear here" readonly>
+
+                <button id="copyButton">
+                    Copy
+                </button>
+
+            </div>
+
+            <div class="setting">
+
+                <div class="setting-header">
+
+                    <label for="length">
+                        Password Length
+                    </label>
+
+                    <span id="lengthValue">12</span>
+
+                </div>
+
+                <input type="range" id="length" min="6" max="32" value="12">
+
+            </div>
+
+            <div class="options">
+
+                <label>
+                    <input type="checkbox" id="uppercase" checked>
+                    Uppercase Letters
+                </label>
+
+                <label>
+                    <input type="checkbox" id="lowercase" checked>
+                    Lowercase Letters
+                </label>
+
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    Numbers
+                </label>
+
+                <label>
+                    <input type="checkbox" id="symbols" checked>
+                    Symbols
+                </label>
+
+            </div>
+
+            <div class="strength">
+
+                <div class="strength-header">
+
+                    <span>Password Strength</span>
+
+                    <strong id="strengthText">
+                        Strong
+                    </strong>
+
+                </div>
+
+                <div class="strength-bar">
+
+                    <div id="strengthFill"></div>
+
+                </div>
+
+            </div>
+
+            <button id="generateButton" class="generate-button">
+                Generate Password
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
